@@ -23,7 +23,7 @@ jobs:
 
           # run image
           docker run -d \
-            -p 9876:4560 \
+            -p 3333:4560 \
             --name aaron-test-blazor \
             aaron-test-blazor
 
