@@ -16,3 +16,15 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - run: |
+        # build
+        docker build -t aaron-test-blazor
+
+        # run image
+        docker run -d \
+          -p 9876:4560 \
+          --name aaron-test-blazor \
+          aaron-test-blazor
+
+        echo "made it to this point 🎉"
