@@ -19,7 +19,7 @@ jobs:
 
       - run: |
         # build
-        docker build -t aaron-test-blazor
+        docker build -t aaron-test-blazor .
 
         # run image
         docker run -d \
