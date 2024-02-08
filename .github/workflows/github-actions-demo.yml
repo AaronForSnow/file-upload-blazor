@@ -19,9 +19,11 @@ jobs:
 
       - run: |
           # build
+
           docker build -t aaron-test-blazor .
 
           # run image
+          docker rm -f aaron-test-blazor || true
           docker run -d \
             -p 3333:4560 \
             --name aaron-test-blazor \
